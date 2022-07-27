@@ -1,9 +1,9 @@
 FROM        --platform=$TARGETOS/$TARGETARCH python:3.8-slim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="Michael Parker" maintainer="internet@doctor-internet.dev"
 
 RUN         apt update \
-            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps lua5.1 \
             && useradd -m -d /home/container container
 
 USER        container
